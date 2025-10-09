@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог лагерей и здравниц — АДЛИЗК</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e8f5e9, #f1f8e9, #e0f2f1);
+      color: #1a1a1a;
+      margin-bottom: 60px; /* Space for fixed footer */
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(20px) saturate(180%);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      padding: 2rem;
+    }
+    .glass:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+    }
+    .btn {
+      background: linear-gradient(135deg, #66bb6a, #aed581);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: linear-gradient(135deg, #43a047, #7cb342);
+      transform: scale(1.05);
+    }
+    nav a {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.6);
+      color: #2e7d32;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #1a1a1a;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <!-- Навигация -->
+  <nav class="glass fixed top-0 left-0 right-0 p-4 z-50">
+    <div class="max-w-6xl mx-auto flex justify-center items-center gap-4">
+      <a href="index-adlizk.html" class="text-gray-800 font-medium">Главная</a>
+      <a href="tips.html" class="text-gray-800 font-medium">Советы родителям</a>
+      <a href="events.html" class="text-gray-800 font-medium">Мероприятия</a>
+      <a href="about.html" class="text-gray-800 font-medium">О нас</a>
+      <a href="camps.html" class="text-gray-800 font-medium">Каталог лагерей</a>
+      <a href="resources.html" class="text-gray-800 font-medium">Ресурсы</a>
+    </div>
+  </nav>
+
+  <!-- Заголовок -->
+  <section class="text-center pt-24 pb-12 px-6">
+    <h2 class="text-4xl font-extrabold mb-6 text-green-800">Каталог лагерей и здравниц</h2>
+    <p class="text-lg max-w-3xl mx-auto text-gray-700">
+      Найдите идеальный лагерь или здравницу для вашего ребёнка в Краснодарском крае. Все наши партнёры сертифицированы, предлагают безопасный и развивающий отдых с акцентом на экологию, здоровье и образование.
+    </p>
+  </section>
+
+  <!-- Фильтры -->
+  <section class="max-w-6xl mx-auto px-6 pb-8">
+    <div class="glass mb-8">
+      <h3 class="text-lg font-semibold mb-4 text-green-800">Найти лагерь</h3>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div>
+          <label for="age" class="block text-sm font-medium text-gray-700 mb-1">Возраст</label>
+          <select id="age" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+            <option>Все возраста</option>
+            <option>6–10 лет</option>
+            <option>11–14 лет</option>
+            <option>15–17 лет</option>
+          </select>
+        </div>
+        <div>
+          <label for="type" class="block text-sm font-medium text-gray-700 mb-1">Тип отдыха</label>
+          <select id="type" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+            <option>Все типы</option>
+            <option>Морской</option>
+            <option>Горный</option>
+            <option>Образовательный</option>
+            <option>Экологический</option>
+          </select>
+        </div>
+        <div>
+          <label for="price" class="block text-sm font-medium text-gray-700 mb-1">Цена</label>
+          <select id="price" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+            <option>Любой бюджет</option>
+            <option>Эконом</option>
+            <option>Средний</option>
+            <option>Премиум</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Список лагерей -->
+  <section class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 px-6 pb-16">
+    <div class="glass">
+      <svg class="w-full h-48 mb-4" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+        <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
+        <path d="M50 70 L100 30 L150 70" fill="none" stroke="#66bb6a" stroke-width="4"/>
+        <circle cx="100" cy="30" r="10" fill="#aed581"/>
+        <text x="100" y="85" font-size="10" fill="#2e7d32" text-anchor="middle">Солнечный</text>
+      </svg>
+      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="sun" class="w-5 h-5 text-green-600"></i> Лагерь "Солнечный"</h3>
+      <p class="mb-4 text-gray-700 text-sm">
+        Возраст: 7–14 лет. Морской отдых с экологическими и спортивными программами. Расположен на Черноморском побережье.
+      </p>
+      <a href="#" class="btn">Подробнее</a>
+    </div>
+    <div class="glass">
+      <svg class="w-full h-48 mb-4" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+        <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
+        <path d="M50 70 L100 30 L150 70" fill="none" stroke="#66bb6a" stroke-width="4"/>
+        <circle cx="100" cy="30" r="10" fill="#aed581"/>
+        <text x="100" y="85" font-size="10" fill="#2e7d32" text-anchor="middle">Горный Ветер</text>
+      </svg>
+      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="mountain" class="w-5 h-5 text-green-600"></i> Лагерь "Горный Ветер"</h3>
+      <p class="mb-4 text-gray-700 text-sm">
+        Возраст: 10–16 лет. Горные походы, образовательные программы и творческие мастер-классы в Кавказских горах.
+      </p>
+      <a href="#" class="btn">Подробнее</a>
+    </div>
+    <div class="glass">
+      <svg class="w-full h-48 mb-4" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+        <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
+        <path d="M50 70 L100 30 L150 70" fill="none" stroke="#66bb6a" stroke-width="4"/>
+        <circle cx="100" cy="30" r="10" fill="#aed581"/>
+        <text x="100" y="85" font-size="10" fill="#2e7d32" text-anchor="middle">Знание</text>
+      </svg>
+      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="book-open" class="w-5 h-5 text-green-600"></i> Лагерь "Знание"</h3>
+      <p class="mb-4 text-gray-700 text-sm">
+        Возраст: 8–15 лет. Образовательный лагерь с курсами по науке, экологии и искусству в пригороде Краснодара.
+      </p>
+      <a href="#" class="btn">Подробнее</a>
+    </div>
+    <div class="glass">
+      <svg class="w-full h-48 mb-4" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+        <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
+        <path d="M50 70 L100 30 L150 70" fill="none" stroke="#66bb6a" stroke-width="4"/>
+        <circle cx="100" cy="30" r="10" fill="#aed581"/>
+        <text x="100" y="85" font-size="10" fill="#2e7d32" text-anchor="middle">Лесная Поляна</text>
+      </svg>
+      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="tree-pine" class="w-5 h-5 text-green-600"></i> Здравница "Лесная Поляна"</h3>
+      <p class="mb-4 text-gray-700 text-sm">
+        Возраст: 6–12 лет. Оздоровительные программы, экологические прогулки и семейные активности в лесной зоне.
+      </p>
+      <a href="#" class="btn">Подробнее</a>
+    </div>
+  </section>
+
+  <!-- Подвал -->
+  <footer class="text-gray-100 py-4 text-center">
+    © 2025 АДЛИЗК. Все права защищены.
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
