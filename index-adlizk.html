@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>АДЛИЗК — Отдых и воспитание для всей семьи</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e8f5e9, #f1f8e9, #e0f2f1);
+      color: #1a1a1a;
+      margin-bottom: 60px; /* Space for fixed footer */
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(20px) saturate(180%);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      padding: 2rem;
+    }
+    .glass:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+    }
+    .btn {
+      background: linear-gradient(135deg, #66bb6a, #aed581);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: linear-gradient(135deg, #43a047, #7cb342);
+      transform: scale(1.05);
+    }
+    nav a {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.6);
+      color: #2e7d32;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    #modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+    }
+    #modal .glass {
+      max-width: 450px;
+      text-align: center;
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #1a1a1a;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <!-- Навигация -->
+  <nav class="glass fixed top-0 left-0 right-0 p-4 z-50">
+    <div class="max-w-6xl mx-auto flex justify-center items-center gap-4">
+      <a href="index-adlizk.html" class="text-gray-800 font-medium">Главная</a>
+      <a href="tips.html" class="text-gray-800 font-medium">Советы родителям</a>
+      <a href="events.html" class="text-gray-800 font-medium">Мероприятия</a>
+      <a href="about.html" class="text-gray-800 font-medium">О нас</a>
+      <a href="camps.html" class="text-gray-800 font-medium">Каталог лагерей</a>
+      <a href="resources.html" class="text-gray-800 font-medium">Ресурсы</a>
+    </div>
+  </nav>
+
+  <!-- Герой -->
+  <section class="flex flex-col items-center justify-center text-center flex-1 px-6 pt-24 pb-16">
+    <h2 class="text-4xl font-extrabold mb-6 text-green-800">АДЛИЗК — Ваш семейный гид</h2>
+    <p class="text-lg max-w-3xl text-gray-700 mb-8">
+      АДЛИЗК помогает семьям организовать незабываемый отдых в детских лагерях и здравницах региона, а также предлагает программы по воспитанию детей. 
+      Наши курсы, советы и мероприятия созданы для укрепления семейных уз, развития навыков родителей и обеспечения безопасного и полезного времяпрепровождения для детей. 
+      Мы фокусируемся на экологичных подходах, здоровье и образовании в природной среде Краснодарского края.
+    </p>
+    <a href="tips.html" class="btn">Изучить программы</a>
+  </section>
+
+  <!-- Преимущества -->
+  <section class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6 pb-16">
+    <div class="glass p-6 text-center">
+      <i data-lucide="book-open" class="w-8 h-8 text-green-600 mx-auto mb-4"></i>
+      <h3 class="text-lg font-semibold mb-2">Курсы для родителей</h3>
+      <p class="text-gray-700 text-sm">
+        Расширенные практические программы по воспитанию, организации отдыха в лагерях и развитию навыков. 
+        Учитесь понимать эмоции детей, планировать безопасные путешествия по Краснодарскому краю и справляться с повседневными вызовами в семейной жизни. 
+        Каждый курс включает видеоуроки, тесты и персональные рекомендации.
+      </p>
+    </div>
+    <div class="glass p-6 text-center">
+      <i data-lucide="calendar" class="w-8 h-8 text-green-600 mx-auto mb-4"></i>
+      <h3 class="text-lg font-semibold mb-2">Семейные мероприятия</h3>
+      <p class="text-gray-700 text-sm">
+        Широкий спектр семинаров, вебинаров и мастер-классов для семей, включая экологические прогулки, игры на природе и обсуждения здоровья. 
+        Создавайте незабываемые воспоминания, укрепляя связи в кругу семьи.
+      </p>
+    </div>
+    <div class="glass p-6 text-center">
+      <i data-lucide="award" class="w-8 h-8 text-green-600 mx-auto mb-4"></i>
+      <h3 class="text-lg font-semibold mb-2">Сертификаты и ресурсы</h3>
+      <p class="text-gray-700 text-sm">
+        Получайте официальные сертификаты по завершении курсов и мероприятий, подтверждающие ваши навыки в области детского отдыха и воспитания. 
+        Доступ к обширной библиотеке ресурсов: чек-листы, видео, статьи и консультации экспертов по здоровью и образованию.
+      </p>
+    </div>
+  </section>
+
+  <!-- Регистрация -->
+  <section class="max-w-6xl mx-auto px-6 pb-16">
+    <div class="glass p-6">
+      <h2 class="text-2xl font-extrabold mb-4 text-green-800 text-center">Регистрация участника</h2>
+      <p class="text-base text-gray-700 mb-4 text-center">
+        Запишитесь на наши курсы и мероприятия, чтобы получить полный доступ к материалам, сертификатам и персональным консультациям экспертов АДЛИЗК.
+      </p>
+      <div class="max-w-md mx-auto">
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Имя</label>
+          <input type="text" id="name" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Введите ваше имя" required>
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Введите ваш email" required>
+        </div>
+        <div class="mb-4">
+          <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Телефон</label>
+          <input type="tel" id="phone" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Введите ваш телефон" required>
+        </div>
+        <button id="register-btn" class="btn w-full text-center">Зарегистрироваться</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Модальное окно -->
+  <div id="modal" class="hidden">
+    <div class="glass p-6 max-w-md text-center">
+      <h3 class="text-lg font-semibold mb-4 text-green-800">Регистрация успешна!</h3>
+      <p class="text-gray-700 text-sm mb-4">
+        Спасибо за регистрацию! Вы получите доступ к материалам, сертификатам и консультациям на указанный email.
+      </p>
+      <button id="close-modal" class="btn">Закрыть</button>
+    </div>
+  </div>
+
+  <!-- Подвал -->
+  <footer class="text-gray-100 py-4 text-center">
+    © 2025 АДЛИЗК. Все права защищены.
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    // Показ модального окна при нажатии на кнопку
+    document.getElementById('register-btn').addEventListener('click', () => {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      if (name && email && phone) {
+        document.getElementById('modal').style.display = 'flex';
+      } else {
+        alert('Пожалуйста, заполните все поля.');
+      }
+    });
+
+    // Закрытие модального окна
+    document.getElementById('close-modal').addEventListener('click', () => {
+      document.getElementById('modal').style.display = 'none';
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('phone').value = '';
+    });
+
+    // Закрытие модального окна при клике вне области
+    document.getElementById('modal').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('modal')) {
+        document.getElementById('modal').style.display = 'none';
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('phone').value = '';
+      }
+    });
+  </script>
+</body>
+</html>
