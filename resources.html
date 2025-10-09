@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ресурсы для родителей — АДЛИЗК</title>
+  <title>Ресурсы и материалы — АДЛИЗК</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
@@ -55,8 +55,22 @@
       width: 100%;
       background: #1a1a1a;
     }
-    .resource-svg { animation: pulse 3s ease-in-out infinite; }
-    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+    #modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+    }
+    #modal .glass {
+      max-width: 450px;
+      text-align: center;
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -68,70 +82,128 @@
       <a href="about.html" class="text-gray-800 font-medium">О нас</a>
       <a href="camps.html" class="text-gray-800 font-medium">Каталог лагерей</a>
       <a href="resources.html" class="text-gray-800 font-medium">Ресурсы</a>
+      <a href="registration.html" class="text-gray-800 font-medium">Регистрация</a>
     </div>
   </nav>
   <section class="text-center pt-24 pb-12 px-6">
-    <h2 class="text-4xl font-extrabold mb-6 text-green-800">Ресурсы для родителей</h2>
+    <h2 class="text-4xl font-extrabold mb-6 text-green-800">Ресурсы и материалы</h2>
     <p class="text-lg max-w-3xl mx-auto text-gray-700">
-      Полезные материалы и руководства для родителей, чтобы поддерживать развитие и безопасность детей.
+      Получите доступ к полезным материалам для родителей: статьи, видео, чек-листы и гайды по воспитанию, безопасности и организации отдыха в лагерях Краснодарского края. Зарегистрируйтесь, чтобы скачать эксклюзивные ресурсы.
     </p>
   </section>
   <section class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 px-6 pb-16">
     <div class="glass">
-      <svg class="w-full h-48 mb-4 resource-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+      <svg class="w-full h-48 mb-4" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
         <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
-        <rect x="80" y="30" width="40" height="40" fill="none" stroke="#66bb6a" stroke-width="4"/>
-        <circle cx="100" cy="50" r="5" fill="#aed581"/>
-        <text x="100" y="95" font-size="10" fill="#2e7d32" text-anchor="middle">Цифровая безопасность</text>
+        <rect x="80" y="30" width="40" height="40" fill="none" stroke="#00bfff" stroke-width="4"/>
+        <circle cx="100" cy="50" r="5" fill="#1e90ff"/>
       </svg>
-      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="shield" class="w-5 h-5 text-green-600"></i> Цифровая безопасность</h3>
+      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="file-text" class="w-5 h-5 text-green-600"></i> Гайд: Подготовка к лагерю</h3>
       <p class="mb-4 text-gray-700 text-sm">
-        Руководство по защите детей в интернете, настройке родительского контроля и безопасному поведению онлайн.
+        Чек-лист и советы для родителей: что взять в лагерь, как подготовить ребёнка и обеспечить безопасность.
       </p>
-      <a href="digital-safety-details.html" class="btn">Подробнее</a>
+      <a href="#" class="btn">Скачать (требуется регистрация)</a>
     </div>
     <div class="glass">
-      <svg class="w-full h-48 mb-4 resource-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+      <svg class="w-full h-48 mb-4" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
         <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
-        <path d="M100 30 Q80 20 70 40 Q100 60 130 40 Q120 20 100 30" fill="#66bb6a"/>
-        <text x="100" y="95" font-size="10" fill="#2e7d32" text-anchor="middle">Эмоции</text>
+        <polygon points="60,80 100,20 140,80" fill="none" stroke="#ff4500" stroke-width="4"/>
+        <circle cx="100" cy="50" r="10" fill="#ffd700"/>
       </svg>
-      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="heart" class="w-5 h-5 text-green-600"></i> Эмоциональная связь с детьми</h3>
+      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="video" class="w-5 h-5 text-green-600"></i> Видео: Экологические игры</h3>
       <p class="mb-4 text-gray-700 text-sm">
-        Советы по укреплению эмоциональной связи и пониманию чувств детей.
+        Запись мастер-класса по организации экологических игр для детей на природе.
       </p>
-      <a href="emotional-connection-details.html" class="btn">Подробнее</a>
+      <a href="#" class="btn">Смотреть (требуется регистрация)</a>
     </div>
     <div class="glass">
-      <svg class="w-full h-48 mb-4 resource-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+      <svg class="w-full h-48 mb-4" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
         <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
-        <path d="M80 60 L120 60 L100 40 Z" fill="#66bb6a"/>
-        <text x="100" y="95" font-size="10" fill="#2e7d32" text-anchor="middle">Отдых</text>
+        <rect x="50" y="20" width="100" height="60" fill="none" stroke="#1e90ff" stroke-width="4"/>
+        <line x1="50" y1="20" x2="150" y2="80" stroke="#00bfff" stroke-width="4"/>
       </svg>
-      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="sun" class="w-5 h-5 text-green-600"></i> Семейный отдых</h3>
+      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="book-open" class="w-5 h-5 text-green-600"></i> Статья: Безопасность в лагере</h3>
       <p class="mb-4 text-gray-700 text-sm">
-        Руководство по организации семейного отдыха, выбору направлений и активностей.
+        10 советов по обеспечению безопасности детей во время отдыха в лагерях и здравницах.
       </p>
-      <a href="family-vacation-details.html" class="btn">Подробнее</a>
+      <a href="#" class="btn">Читать</a>
     </div>
     <div class="glass">
-      <svg class="w-full h-48 mb-4 resource-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+      <svg class="w-full h-48 mb-4" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
         <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
-        <circle cx="100" cy="50" r="15" fill="#66bb6a"/>
-        <text x="100" y="95" font-size="10" fill="#2e7d32" text-anchor="middle">Таланты</text>
+        <path d="M100 20 L120 40 L100 60 L80 40 Z" fill="#ffd700"/>
       </svg>
-      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="star" class="w-5 h-5 text-green-600"></i> Развитие талантов</h3>
+      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-green-600"></i> Сертификаты участников</h3>
       <p class="mb-4 text-gray-700 text-sm">
-        Как раскрыть и поддержать таланты вашего ребёнка через творчество и образование.
+        Скачайте сертификаты за участие в наших курсах и мероприятия после регистрации.
       </p>
-      <a href="talent-development-details.html" class="btn">Подробнее</a>
+      <a href="#" class="btn">Получить сертификат</a>
     </div>
   </section>
-  <footer class="text-gray-100 py-4 text-center">
+  <section class="max-w-6xl mx-auto px-6 pb-16">
+    <div class="glass p-6">
+      <h2 class="text-2xl font-extrabold mb-4 text-green-800 text-center">Получите доступ к ресурсам</h2>
+      <p class="text-base text-gray-700 mb-4 text-center">
+        Зарегистрируйтесь, чтобы скачать эксклюзивные материалы и получить доступ к записям вебинаров.
+      </p>
+      <div class="max-w-md mx-auto">
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Имя</label>
+          <input type="text" id="name" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Введите ваше имя" required>
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Введите ваш email" required>
+        </div>
+        <div class="mb-4">
+          <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Телефон</label>
+          <input type="tel" id="phone" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Введите ваш телефон" required>
+        </div>
+        <button id="register-btn" class="btn w-full text-center">Зарегистрироваться</button>
+      </div>
+    </div>
+  </section>
+  <div id="modal" class="hidden">
+    <div class="glass p-6">
+      <h3 class="text-lg font-semibold mb-4 text-green-800">Регистрация успешна!</h3>
+      <p class="text-gray-700 text-sm mb-4">
+        Спасибо за регистрация! Вы получите доступ к материалам на указанный email.
+      </p>
+      <button id="close-modal" class="btn">Закрыть</button>
+    </div>
+  </div>
+  <footer class="bg-gray-900 text-gray-100 py-6 text-center">
     © 2025 АДЛИЗК. Все права защищены.
   </footer>
   <script>
     lucide.createIcons();
+
+    document.getElementById('register-btn').addEventListener('click', () => {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      if (name && email && phone) {
+        document.getElementById('modal').style.display = 'flex';
+      } else {
+        alert('Пожалуйста, заполните все поля.');
+      }
+    });
+
+    document.getElementById('close-modal').addEventListener('click', () => {
+      document.getElementById('modal').style.display = 'none';
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('phone').value = '';
+    });
+
+    document.getElementById('modal').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('modal')) {
+        document.getElementById('modal').style.display = 'none';
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('phone').value = '';
+      }
+    });
   </script>
 </body>
 </html>
