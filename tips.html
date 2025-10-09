@@ -11,6 +11,7 @@
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, #e8f5e9, #f1f8e9, #e0f2f1);
       color: #1a1a1a;
+      margin-bottom: 60px;
     }
     .glass {
       background: rgba(255, 255, 255, 0.4);
@@ -38,74 +39,64 @@
       background: linear-gradient(135deg, #43a047, #7cb342);
       transform: scale(1.05);
     }
+    nav a {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.6);
+      color: #2e7d32;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #1a1a1a;
+    }
+    .tip-svg { animation: pulse 3s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
   </style>
 </head>
 <body class="min-h-screen flex flex-col">
-
-  <!-- Навигация -->
   <nav class="glass fixed top-0 left-0 right-0 p-4 z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold flex items-center gap-2 text-green-700">
-        <i data-lucide="leaf" class="w-6 h-6"></i> Ассоциация Детских Лагерей и Здравниц Краснодарского Края
-      </h1>
-      <div class="space-x-6 text-gray-800 font-medium">
-        <a href="index.html" class="hover:text-green-600">Главная</a>
-        <a href="tips.html" class="hover:text-green-600">Советы родителям</a>
-        <a href="events.html" class="hover:text-green-600">Мероприятия</a>
-      </div>
+    <div class="max-w-6xl mx-auto flex justify-center items-center gap-4">
+      <a href="index-adlizk.html" class="text-gray-800 font-medium">Главная</a>
+      <a href="tips.html" class="text-gray-800 font-medium">Советы родителям</a>
+      <a href="events.html" class="text-gray-800 font-medium">Мероприятия</a>
+      <a href="about.html" class="text-gray-800 font-medium">О нас</a>
+      <a href="camps.html" class="text-gray-800 font-medium">Каталог лагерей</a>
+      <a href="resources.html" class="text-gray-800 font-medium">Ресурсы</a>
     </div>
   </nav>
-
-  <!-- Заголовок -->
   <section class="text-center pt-24 pb-12 px-6">
-    <h2 class="text-4xl font-extrabold mb-6 text-green-800">Советы и курсы для родителей</h2>
+    <h2 class="text-4xl font-extrabold mb-6 text-green-800">Советы родителям</h2>
     <p class="text-lg max-w-3xl mx-auto text-gray-700">
-      Программы ассоциации помогают родителям лучше понимать детей, организовывать отдых в детских лагерях и здравницах Краснодарского края, развивать навыки воспитания и обеспечивать безопасность. 
-      Каждый курс включает теоретические материалы, практические задания, тесты и сертификаты по завершении.
+      Полезные рекомендации для родителей по воспитанию, безопасности и организации отдыха детей.
     </p>
   </section>
-
-  <!-- Курсы -->
-  <section class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 px-6 pb-16">
+  <section class="max-w-6xl mx-auto px-6 pb-16">
     <div class="glass">
-      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="heart" class="w-5 h-5 text-green-600"></i> Эмоциональная связь с ребенком</h3>
-      <p class="mb-4 text-gray-700 text-sm">
-        Курс учит выстраивать доверительные отношения с детьми. Узнайте, как понимать эмоции, справляться с капризами, создавать теплую атмосферу и интегрировать элементы отдыха в лагерях для укрепления связей. 
-        Включает примеры из практики здравниц региона.
-      </p>
-      <a href="emotional-connection-details.html" class="btn">Узнать больше</a>
-    </div>
-
-    <div class="glass">
-      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="map" class="w-5 h-5 text-green-600"></i> Организация семейного отдыха</h3>
-      <p class="mb-4 text-gray-700 text-sm">
-        Советы по планированию безопасного отдыха с детьми в лагерях и здравницах: выбор направлений в Краснодарском крае, составление бюджета, активности для всей семьи и интеграция образовательных элементов.
-      </p>
-      <a href="family-vacation-details.html" class="btn">Узнать больше</a>
-    </div>
-
-    <div class="glass">
-      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="smartphone" class="w-5 h-5 text-green-600"></i> Цифровая безопасность детей</h3>
-      <p class="mb-4 text-gray-700 text-sm">
-        Научитесь защищать детей в интернете, настраивать родительский контроль, предотвращать киберугрозы и интегрировать цифровую грамотность в программы лагерей.
-      </p>
-      <a href="digital-safety-details.html" class="btn">Узнать больше</a>
-    </div>
-
-    <div class="glass">
-      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="smile" class="w-5 h-5 text-green-600"></i> Развитие детских талантов</h3>
-      <p class="mb-4 text-gray-700 text-sm">
-        Узнайте, как раскрыть потенциал ребенка, выбрать кружки в здравницах, поддерживать мотивацию и организовывать творческие активности на природе.
-      </p>
-      <a href="talent-development-details.html" class="btn">Узнать больше</a>
+      <svg class="w-full h-48 mb-4 tip-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+        <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
+        <circle cx="100" cy="50" r="15" fill="#66bb6a"/>
+        <path d="M90 50 L110 50 M100 40 L100 60" stroke="#aed581" stroke-width="3"/>
+        <text x="100" y="95" font-size="10" fill="#2e7d32" text-anchor="middle">Советы</text>
+      </svg>
+      <h3 class="text-2xl font-semibold mb-4 text-green-800">Советы для родителей</h3>
+      <ul class="list-disc pl-6 mb-4 text-gray-700 text-sm">
+        <li>Подготовка к лагерю: что взять с собой и как подготовить ребёнка.</li>
+        <li>Безопасность: как выбрать безопасный лагерь и что проверить.</li>
+        <li>Эмоциональная поддержка: как помочь ребёнку адаптироваться к новому месту.</li>
+        <li>Экологическое воспитание: как привить любовь к природе.</li>
+      </ul>
+      <a href="resources.html" class="btn">Больше ресурсов</a>
     </div>
   </section>
-
-  <!-- Подвал -->
-  <footer class="bg-gray-900 text-gray-100 py-6 text-center">
-    © 2025 Ассоциация Детских Лагерей и Здравниц Краснодарского Края. Все права защищены.
+  <footer class="text-gray-100 py-4 text-center">
+    © 2025 АДЛИЗК. Все права защищены.
   </footer>
-
   <script>
     lucide.createIcons();
   </script>
