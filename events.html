@@ -55,8 +55,6 @@
       width: 100%;
       background: #1a1a1a;
     }
-    .event-svg { animation: pulse 3s ease-in-out infinite; }
-    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
   </style>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -68,78 +66,90 @@
       <a href="about.html" class="text-gray-800 font-medium">О нас</a>
       <a href="camps.html" class="text-gray-800 font-medium">Каталог лагерей</a>
       <a href="resources.html" class="text-gray-800 font-medium">Ресурсы</a>
+      <a href="registration.html" class="text-gray-800 font-medium">Регистрация</a>
     </div>
   </nav>
   <section class="text-center pt-24 pb-12 px-6">
-    <h2 class="text-4xl font-extrabold mb-6 text-green-800">Мероприятия</h2>
+    <h2 class="text-4xl font-extrabold mb-6 text-green-800">Семейные мероприятия</h2>
     <p class="text-lg max-w-3xl mx-auto text-gray-700">
-      Присоединяйтесь к нашим семинарам, вебинарам и мастер-классам для родителей и семей. Узнайте больше о воспитании, безопасности и экологии.
+      Присоединяйтесь к нашим мероприятиям, чтобы укрепить семейные узы и узнать больше о воспитании.
     </p>
   </section>
   <section class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 px-6 pb-16">
     <div class="glass">
-      <svg class="w-full h-48 mb-4 event-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+      <svg class="w-full h-48 mb-4" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
         <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
-        <path d="M100 30 Q80 20 70 40 Q100 60 130 40 Q120 20 100 30" fill="#66bb6a"/>
-        <text x="100" y="95" font-size="10" fill="#2e7d32" text-anchor="middle">Форум</text>
+        <rect x="80" y="50" width="40" height="30" fill="#8b4513"/>
+        <path d="M60 50 L100 30 L140 50" fill="#cd853f" stroke="#a52a2a" stroke-width="2"/>
       </svg>
-      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="shield" class="w-5 h-5 text-green-600"></i> Форум по безопасности детей</h3>
+      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="calendar-days" class="w-5 h-5 text-green-600"></i> Семинар: Планирование семейного отдыха</h3>
       <p class="mb-4 text-gray-700 text-sm">
-        Узнайте, как обеспечить безопасность детей в лагерях и дома. Практические советы от экспертов.
+        Дата: 22.10.2025 — Узнайте, как организовать безопасный и веселый семейный отдых в лагерях региона, включая экологические аспекты и здоровье.
       </p>
-      <a href="child-safety-forum.html" class="btn">Подробнее</a>
+      <a href="family-travel-seminar.html" class="btn">Узнать больше</a>
     </div>
     <div class="glass">
-      <svg class="w-full h-48 mb-4 event-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+      <svg class="w-full h-48 mb-4" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
         <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
-        <rect x="90" y="70" width="10" height="30" fill="#2e7d32"/>
-        <path d="M100 40 Q90 60 100 70 Q110 60 100 40" fill="#66bb6a"/>
-        <text x="100" y="95" font-size="10" fill="#2e7d32" text-anchor="middle">Экология</text>
+        <circle cx="100" cy="50" r="20" fill="#ffd700" stroke="#ff8c00" stroke-width="2"/>
+        <path d="M90 50 L110 50 M100 40 L100 60" stroke="#ff4500" stroke-width="3"/>
       </svg>
-      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="leaf" class="w-5 h-5 text-green-600"></i> Экологическая мастерская</h3>
+      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="video" class="w-5 h-5 text-green-600"></i> Вебинар: Воспитание без стресса</h3>
       <p class="mb-4 text-gray-700 text-sm">
-        Практические занятия по экологии и защите природы для всей семьи.
+        Дата: 25.10.2025 — Советы психологов по воспитанию без стресса и капризов, с примерами из практики здравниц.
       </p>
-      <a href="ecology-workshop.html" class="btn">Подробнее</a>
+      <a href="stress-free-parenting-webinar.html" class="btn">Узнать больше</a>
     </div>
     <div class="glass">
-      <svg class="w-full h-48 mb-4 event-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+      <svg class="w-full h-48 mb-4" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
         <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
-        <path d="M80 60 L120 60 L100 40 Z" fill="#66bb6a"/>
-        <text x="100" y="95" font-size="10" fill="#2e7d32" text-anchor="middle">Традиции</text>
+        <path d="M100 30 Q80 20 70 40 Q100 60 130 40 Q120 20 100 30" fill="#ff1493" stroke="#c71585" stroke-width="2"/>
       </svg>
-      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="home" class="w-5 h-5 text-green-600"></i> Мастерская семейных традиций</h3>
+      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="users" class="w-5 h-5 text-green-600"></i> Мастер-класс: Семейные традиции</h3>
       <p class="mb-4 text-gray-700 text-sm">
-        Создавайте семейные традиции, которые укрепляют связь между поколениями.
+        Дата: 28.10.2025 — Создайте уникальные семейные традиции для сплочения семьи, включая игры на природе.
       </p>
-      <a href="family-traditions-workshop.html" class="btn">Подробнее</a>
+      <a href="family-traditions-workshop.html" class="btn">Узнать больше</a>
     </div>
     <div class="glass">
-      <svg class="w-full h-48 mb-4 event-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+      <svg class="w-full h-48 mb-4" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
         <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
-        <circle cx="100" cy="50" r="20" fill="none" stroke="#66bb6a" stroke-width="4"/>
-        <text x="100" y="95" font-size="10" fill="#2e7d32" text-anchor="middle">Путешествия</text>
+        <path d="M100 20 Q90 40 80 60 Q100 80 120 60 Q110 40 100 20" fill="#ff0000" stroke="#8b0000" stroke-width="2"/>
       </svg>
-      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="map" class="w-5 h-5 text-green-600"></i> Семинар по семейным путешествиям</h3>
+      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="mic" class="w-5 h-5 text-green-600"></i> Форум: Безопасность детей на отдыхе</h3>
       <p class="mb-4 text-gray-700 text-sm">
-        Планируйте увлекательные семейные путешествия с учётом интересов детей.
+        Дата: 01.11.2025 — Обсуждение мер безопасности для детей во время поездок в лагеря и здравницы.
       </p>
-      <a href="family-travel-seminar.html" class="btn">Подробнее</a>
+      <a href="child-safety-forum.html" class="btn">Узнать больше</a>
     </div>
     <div class="glass">
-      <svg class="w-full h-48 mb-4 event-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+      <svg class="w-full h-48 mb-4" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
         <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
-        <circle cx="100" cy="50" r="15" fill="#66bb6a"/>
-        <text x="100" y="95" font-size="10" fill="#2e7d32" text-anchor="middle">Родительство</text>
+        <rect x="90" y="70" width="10" height="30" fill="#8d6e63"/>
+        <circle cx="100" cy="50" r="20" fill="#228b22"/>
+        <circle cx="80" cy="60" r="15" fill="#32cd32"/>
+        <circle cx="120" cy="60" r="15" fill="#32cd32"/>
       </svg>
-      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="smile" class="w-5 h-5 text-green-600"></i> Вебинар по безстрессовому родительству</h3>
+      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="tree-pine" class="w-5 h-5 text-green-600"></i> Экологический мастер-класс: Природа и дети</h3>
       <p class="mb-4 text-gray-700 text-sm">
-        Советы по воспитанию детей без стресса и перегрузки для родителей.
+        Дата: 04.11.2025 — Узнайте, как воспитывать экологическое сознание у детей через игры и активности в здравницах.
       </p>
-      <a href="stress-free-parenting-webinar.html" class="btn">Подробнее</a>
+      <a href="ecology-workshop.html" class="btn">Узнать больше</a>
+    </div>
+    <div class="glass">
+      <svg class="w-full h-48 mb-4" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+        <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
+        <circle cx="100" cy="50" r="15" fill="#ffd700"/>
+        <path d="M90 50 L110 50 M100 40 L100 60" stroke="#ff4500" stroke-width="3"/>
+      </svg>
+      <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="activity" class="w-5 h-5 text-green-600"></i> Семинар: Здоровье и активный отдых</h3>
+      <p class="mb-4 text-gray-700 text-sm">
+        Дата: 07.11.2025 — Советы по поддержанию здоровья детей во время отдыха в лагерях, включая питание и спорт.
+      </p>
+      <a href="health-seminar.html" class="btn">Узнать больше</a>
     </div>
   </section>
-  <footer class="text-gray-100 py-4 text-center">
+  <footer class="bg-gray-900 text-gray-100 py-6 text-center">
     © 2025 АДЛИЗК. Все права защищены.
   </footer>
   <script>
