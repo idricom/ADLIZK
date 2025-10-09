@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Развитие талантов — АДЛИЗК</title>
+  <title>Курс: Развитие детских талантов — АДЛИЗК</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
@@ -36,4 +36,71 @@
       display: inline-block;
     }
     .btn:hover {
-      background: linear-gradient(135deg, # Hobbies and interests: This is a common choice among users looking for a balance between creativity and practicality.
+      background: linear-gradient(135deg, #43a047, #7cb342);
+      transform: scale(1.05);
+    }
+    nav a {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.6);
+      color: #2e7d32;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #1a1a1a;
+    }
+    .talent-svg { animation: twinkle 2s ease-in-out infinite; }
+    @keyframes twinkle { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <nav class="glass fixed top-0 left-0 right-0 p-4 z-50">
+    <div class="max-w-6xl mx-auto flex justify-center items-center gap-4">
+      <a href="index-adlizk.html" class="text-gray-800 font-medium">Главная</a>
+      <a href="tips.html" class="text-gray-800 font-medium">Советы родителям</a>
+      <a href="events.html" class="text-gray-800 font-medium">Мероприятия</a>
+      <a href="about.html" class="text-gray-800 font-medium">О нас</a>
+      <a href="camps.html" class="text-gray-800 font-medium">Каталог лагерей</a>
+      <a href="resources.html" class="text-gray-800 font-medium">Ресурсы</a>
+      <a href="registration.html" class="text-gray-800 font-medium">Регистрация</a>
+    </div>
+  </nav>
+  <section class="text-center pt-24 pb-12 px-6">
+    <h2 class="text-4xl font-extrabold mb-6 text-green-800">Курс: Развитие детских талантов</h2>
+    <p class="text-lg max-w-3xl mx-auto text-gray-700">
+      Курс помогает раскрыть потенциал ребенка, выбрать подходящие кружки и поддерживать его мотивацию.
+    </p>
+  </section>
+  <section class="max-w-6xl mx-auto px-6 pb-16">
+    <div class="glass">
+      <svg class="w-full h-48 mb-4 talent-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+        <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
+        <polygon points="100,20 110,40 130,40 115,55 120,75 100,65 80,75 85,55 70,40 90,40" fill="#ffd700" stroke="#ff8c00" stroke-width="2"/>
+      </svg>
+      <h3 class="text-lg font-semibold mb-2">Программа курса:</h3>
+      <ul class="list-disc pl-6 mb-4 text-gray-700 text-sm">
+        <li>Определение интересов и склонностей ребенка.</li>
+        <li>Выбор кружков и секций для развития талантов.</li>
+        <li>Методы мотивации и поддержки детей.</li>
+        <li>Практические игры для развития творчества.</li>
+      </ul>
+      <p class="text-base text-gray-700 mb-4">
+        Курс доступен онлайн с тестами и заданиями. Участники получают рекомендации и материалы.
+      </p>
+      <a href="tips.html" class="btn">Вернуться к курсам</a>
+    </div>
+  </section>
+  <footer class="bg-gray-900 text-gray-100 py-6 text-center">
+    © 2025 АДЛИЗК. Все права защищены.
+  </footer>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
