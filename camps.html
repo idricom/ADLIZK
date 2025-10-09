@@ -55,24 +55,22 @@
       width: 100%;
       background: #1a1a1a;
     }
-    .camp-svg { animation: float 3s ease-in-out infinite; }
-    @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
-    .wave-svg { animation: wave 2s ease-in-out infinite; }
-    @keyframes wave { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
     .bird-svg { animation: fly 4s ease-in-out infinite; }
     @keyframes fly { 0%, 100% { transform: translateX(0) rotate(0deg); } 50% { transform: translateX(10px) rotate(5deg); } }
-    .tree-svg { animation: sway 3s ease-in-out infinite; }
-    @keyframes sway { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(2deg); } }
-    .star-svg { animation: twinkle 2s ease-in-out infinite; }
+    .wave-svg { animation: wave 2s ease-in-out infinite; }
+    @keyframes wave { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
+    .spark-svg { animation: twinkle 2s ease-in-out infinite; }
     @keyframes twinkle { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+    .signal-svg { animation: pulse 3s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+    .spring-svg { animation: bounce 2.5s ease-in-out infinite; }
+    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    .wave-svg { animation: wave 2s ease-in-out infinite; }
+    @keyframes wave { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
     .panda-svg { animation: bounce 2.5s ease-in-out infinite; }
     @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
-    .don-svg { animation: pulse 3s ease-in-out infinite; }
-    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
-    .pearl-svg { animation: shine 2s ease-in-out infinite; }
-    @keyframes shine { 0%, 100% { fill-opacity: 0.8; } 50% { fill-opacity: 1; } }
-    .vitaly-svg { animation: rotate 4s linear infinite; }
-    @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    .river-svg { animation: wave 2s ease-in-out infinite; }
+    @keyframes wave { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
   </style>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -84,6 +82,7 @@
       <a href="about.html" class="text-gray-800 font-medium">О нас</a>
       <a href="camps.html" class="text-gray-800 font-medium">Каталог лагерей</a>
       <a href="resources.html" class="text-gray-800 font-medium">Ресурсы</a>
+      <a href="registration.html" class="text-gray-800 font-medium">Регистрация</a>
     </div>
   </nav>
   <section class="text-center pt-24 pb-12 px-6">
@@ -131,9 +130,8 @@
     <div class="glass">
       <svg class="w-full h-48 mb-4 bird-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
         <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
-        <path d="M50 50 Q100 20 150 50 Q120 70 100 50 Q80 70 50 50" fill="none" stroke="#66bb6a" stroke-width="4" stroke-linecap="round"/>
-        <circle cx="100" cy="30" r="3" fill="#aed581"/>
-        <text x="100" y="95" font-size="10" fill="#2e7d32" text-anchor="middle">Орлёнок</text>
+        <path d="M50 50 Q100 20 150 50 Q120 70 100 50 Q80 70 50 50" fill="none" stroke="#ff4500" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="100" cy="30" r="3" fill="#ffd700"/>
       </svg>
       <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="sun" class="w-5 h-5 text-green-600"></i> Лагерь "Орлёнок"</h3>
       <p class="mb-4 text-gray-700 text-sm">
@@ -144,8 +142,7 @@
     <div class="glass">
       <svg class="w-full h-48 mb-4 star-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
         <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
-        <polygon points="100,20 110,40 130,40 115,55 120,75 100,65 80,75 85,55 70,40 90,40" fill="#aed581"/>
-        <text x="100" y="95" font-size="10" fill="#2e7d32" text-anchor="middle">Артек</text>
+        <polygon points="100,20 110,40 130,40 115,55 120,75 100,65 80,75 85,55 70,40 90,40" fill="#ffd700"/>
       </svg>
       <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-green-600"></i> Лагерь "Артек"</h3>
       <p class="mb-4 text-gray-700 text-sm">
@@ -154,11 +151,9 @@
       <a href="#" class="btn">Подробнее</a>
     </div>
     <div class="glass">
-      <svg class="w-full h-48 mb-4 camp-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+      <svg class="w-full h-48 mb-4 spark-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
         <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
-        <rect x="80" y="60" width="40" height="40" fill="none" stroke="#66bb6a" stroke-width="3"/>
-        <path d="M60 60 L100 40 L140 60" fill="none" stroke="#aed581" stroke-width="3"/>
-        <text x="100" y="95" font-size="10" fill="#2e7d32" text-anchor="middle">Искра</text>
+        <polygon points="100,30 110,50 130,50 115,65 120,85 100,75 80,85 85,65 70,50 90,50" fill="#ff8c00"/>
       </svg>
       <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="zap" class="w-5 h-5 text-green-600"></i> Лагерь "Искра"</h3>
       <p class="mb-4 text-gray-700 text-sm">
@@ -167,11 +162,11 @@
       <a href="#" class="btn">Подробнее</a>
     </div>
     <div class="glass">
-      <svg class="w-full h-48 mb-4 tree-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+      <svg class="w-full h-48 mb-4 signal-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
         <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
-        <rect x="90" y="70" width="10" height="30" fill="#2e7d32"/>
-        <path d="M100 40 Q90 60 100 70 Q110 60 100 40" fill="#66bb6a"/>
-        <text x="100" y="95" font-size="10" fill="#2e7d32" text-anchor="middle">Сигнал</text>
+        <circle cx="100" cy="50" r="20" fill="none" stroke="#1e90ff" stroke-width="4"/>
+        <circle cx="100" cy="50" r="10" fill="none" stroke="#00bfff" stroke-width="3"/>
+        <circle cx="100" cy="50" r="5" fill="#87cefa"/>
       </svg>
       <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="wifi" class="w-5 h-5 text-green-600"></i> Лагерь "Сигнал"</h3>
       <p class="mb-4 text-gray-700 text-sm">
@@ -180,10 +175,9 @@
       <a href="#" class="btn">Подробнее</a>
     </div>
     <div class="glass">
-      <svg class="w-full h-48 mb-4 star-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+      <svg class="w-full h-48 mb-4 spring-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
         <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
-        <polygon points="100,20 110,40 130,40 115,55 120,75 100,65 80,75 85,55 70,40 90,40" fill="#aed581"/>
-        <text x="100" y="95" font-size="10" fill="#2e7d32" text-anchor="middle">Криница</text>
+        <path d="M100 80 L100 50 Q120 40 100 30 Q80 40 100 50" fill="none" stroke="#4169e1" stroke-width="4"/>
       </svg>
       <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="star" class="w-5 h-5 text-green-600"></i> Лагерь "Криница"</h3>
       <p class="mb-4 text-gray-700 text-sm">
@@ -194,9 +188,8 @@
     <div class="glass">
       <svg class="w-full h-48 mb-4 wave-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
         <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
-        <path d="M0 60 Q50 40 100 60 Q150 40 200 60" fill="none" stroke="#66bb6a" stroke-width="4"/>
-        <path d="M0 70 Q50 50 100 70 Q150 50 200 70" fill="none" stroke="#aed581" stroke-width="3"/>
-        <text x="100" y="95" font-size="10" fill="#2e7d32" text-anchor="middle">Морская волна</text>
+        <path d="M0 60 Q50 40 100 60 Q150 40 200 60" fill="none" stroke="#1e90ff" stroke-width="4"/>
+        <path d="M0 70 Q50 50 100 70 Q150 50 200 70" fill="none" stroke="#87ceeb" stroke-width="3"/>
       </svg>
       <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="waves" class="w-5 h-5 text-green-600"></i> Лагерь "Морская волна"</h3>
       <p class="mb-4 text-gray-700 text-sm">
@@ -207,11 +200,12 @@
     <div class="glass">
       <svg class="w-full h-48 mb-4 panda-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
         <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
-        <circle cx="100" cy="50" r="20" fill="#aed581"/>
-        <circle cx="90" cy="45" r="3" fill="#2e7d32"/>
-        <circle cx="110" cy="45" r="3" fill="#2e7d32"/>
-        <path d="M80 60 Q100 70 120 60" fill="none" stroke="#66bb6a" stroke-width="3"/>
-        <text x="100" y="95" font-size="10" fill="#2e7d32" text-anchor="middle">PANDA CAMP</text>
+        <circle cx="100" cy="50" r="20" fill="#f5f5f5" stroke="#000" stroke-width="2"/>
+        <circle cx="90" cy="45" r="5" fill="#000"/>
+        <circle cx="110" cy="45" r="5" fill="#000"/>
+        <path d="M80 60 Q100 70 120 60" fill="none" stroke="#000" stroke-width="3"/>
+        <path d="M80 30 Q90 20 100 30" fill="#f5f5f5" stroke="#000" stroke-width="2"/>
+        <path d="M100 30 Q110 20 120 30" fill="#f5f5f5" stroke="#000" stroke-width="2"/>
       </svg>
       <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="activity" class="w-5 h-5 text-green-600"></i> Лагерь "PANDA CAMP"</h3>
       <p class="mb-4 text-gray-700 text-sm">
@@ -220,10 +214,10 @@
       <a href="#" class="btn">Подробнее</a>
     </div>
     <div class="glass">
-      <svg class="w-full h-48 mb-4 don-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+      <svg class="w-full h-48 mb-4 river-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
         <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
-        <path d="M50 50 L100 30 L150 50 L120 70 L80 70 Z" fill="#66bb6a"/>
-        <text x="100" y="95" font-size="10" fill="#2e7d32" text-anchor="middle">Дон</text>
+        <path d="M0 60 Q50 50 100 60 Q150 50 200 60" fill="none" stroke="#1e90ff" stroke-width="4"/>
+        <path d="M0 70 Q50 60 100 70 Q150 60 200 70" fill="none" stroke="#87ceeb" stroke-width="3"/>
       </svg>
       <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="anchor" class="w-5 h-5 text-green-600"></i> Лагерь "Дон"</h3>
       <p class="mb-4 text-gray-700 text-sm">
@@ -232,7 +226,7 @@
       <a href="#" class="btn">Подробнее</a>
     </div>
   </section>
-  <footer class="text-gray-100 py-4 text-center">
+  <footer class="bg-gray-900 text-gray-100 py-6 text-center">
     © 2025 АДЛИЗК. Все права защищены.
   </footer>
   <script>
