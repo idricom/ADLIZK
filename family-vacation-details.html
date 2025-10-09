@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Курс: Организация семейного отдыха — Ассоциация Детских Лагерей и Здравниц Краснодарского Края</title>
+  <title>Семейный отдых — АДЛИЗК</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
@@ -11,6 +11,7 @@
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, #e8f5e9, #f1f8e9, #e0f2f1);
       color: #1a1a1a;
+      margin-bottom: 60px;
     }
     .glass {
       background: rgba(255, 255, 255, 0.4);
@@ -38,52 +39,60 @@
       background: linear-gradient(135deg, #43a047, #7cb342);
       transform: scale(1.05);
     }
+    nav a {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.6);
+      color: #2e7d32;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #1a1a1a;
+    }
+    .vacation-svg { animation: pulse 3s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
   </style>
 </head>
 <body class="min-h-screen flex flex-col">
-
-  <!-- Навигация -->
   <nav class="glass fixed top-0 left-0 right-0 p-4 z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold flex items-center gap-2 text-green-700">
-        <i data-lucide="leaf" class="w-6 h-6"></i> Ассоциация Детских Лагерей и Здравниц Краснодарского Края
-      </h1>
-      <div class="space-x-6 text-gray-800 font-medium">
-        <a href="index.html" class="hover:text-green-600">Главная</a>
-        <a href="tips.html" class="hover:text-green-600">Советы родителям</a>
-        <a href="events.html" class="hover:text-green-600">Мероприятия</a>
-      </div>
+    <div class="max-w-6xl mx-auto flex justify-center items-center gap-4">
+      <a href="index-adlizk.html" class="text-gray-800 font-medium">Главная</a>
+      <a href="tips.html" class="text-gray-800 font-medium">Советы родителям</a>
+      <a href="events.html" class="text-gray-800 font-medium">Мероприятия</a>
+      <a href="about.html" class="text-gray-800 font-medium">О нас</a>
+      <a href="camps.html" class="text-gray-800 font-medium">Каталог лагерей</a>
+      <a href="resources.html" class="text-gray-800 font-medium">Ресурсы</a>
     </div>
   </nav>
-
-  <!-- Контент -->
-  <section class="max-w-6xl mx-auto pt-24 pb-16 px-6">
+  <section class="text-center pt-24 pb-12 px-6">
+    <h2 class="text-4xl font-extrabold mb-6 text-green-800">Семейный отдых</h2>
+    <p class="text-lg max-w-3xl mx-auto text-gray-700">
+      Советы и ресурсы для организации незабываемого семейного отдыха.
+    </p>
+  </section>
+  <section class="max-w-6xl mx-auto px-6 pb-16">
     <div class="glass">
-      <h2 class="text-3xl font-extrabold mb-4 text-green-800">Курс: Организация семейного отдыха</h2>
+      <svg class="w-full h-48 mb-4 vacation-svg" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+        <rect x="0" y="0" width="200" height="100" fill="#e8f5e9"/>
+        <path d="M80 60 L120 60 L100 40 Z" fill="#66bb6a"/>
+        <text x="100" y="95" font-size="10" fill="#2e7d32" text-anchor="middle">Отдых</text>
+      </svg>
+      <h3 class="text-2xl font-semibold mb-4 text-green-800">О ресурсе</h3>
       <p class="text-base text-gray-700 mb-4">
-        Курс научит планировать безопасный и увлекательный отдых с детьми в детских лагерях и здравницах Краснодарского края. 
-        Вы узнаете, как выбрать направления, составить бюджет, организовать активности для всей семьи и интегрировать элементы здоровья и экологии.
+        Узнайте, как организовать семейный отдых, выбрать подходящие направления и создать яркие воспоминания для всей семьи.
       </p>
-      <h3 class="text-lg font-semibold mb-2">Программа курса:</h3>
-      <ul class="list-disc pl-6 mb-4 text-gray-700 text-sm">
-        <li>Выбор подходящих направлений для семейного отдыха в регионе: море, горы, леса.</li>
-        <li>Составление бюджета и экономия на поездках в лагеря.</li>
-        <li>Организация безопасного отдыха: страховка, аптечка, правила в здравницах.</li>
-        <li>Идеи для семейных игр, активностей и образовательных программ.</li>
-        <li>Интеграция экологии и здоровья в план отдыха.</li>
-      </ul>
-      <p class="text-base text-gray-700 mb-4">
-        Курс доступен онлайн и оффлайн. Участники получают чек-листы, сертификаты, доступ к материалам и консультациям экспертов ассоциации.
-      </p>
-      <a href="tips.html" class="btn">Вернуться к курсам</a>
+      <a href="resources.html" class="btn">Вернуться к ресурсам</a>
     </div>
   </section>
-
-  <!-- Подвал -->
-  <footer class="bg-gray-900 text-gray-100 py-6 text-center">
-    © 2025 Ассоциация Детских Лагерей и Здравниц Краснодарского Края. Все права защищены.
+  <footer class="text-gray-100 py-4 text-center">
+    © 2025 АДЛИЗК. Все права защищены.
   </footer>
-
   <script>
     lucide.createIcons();
   </script>
