@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас — АДЛИЗК</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e8f5e9, #f1f8e9, #e0f2f1);
+      color: #1a1a1a;
+      margin-bottom: 60px; /* Space for fixed footer */
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(20px) saturate(180%);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      padding: 2rem;
+    }
+    .glass:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+    }
+    .btn {
+      background: linear-gradient(135deg, #66bb6a, #aed581);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: linear-gradient(135deg, #43a047, #7cb342);
+      transform: scale(1.05);
+    }
+    nav a {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.6);
+      color: #2e7d32;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #1a1a1a;
+    }
+    /* Анимация для SVG в истории */
+    .krae-svg { animation: gentleRotate 10s linear infinite; }
+    @keyframes gentleRotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    .wave-path { animation: wave 3s ease-in-out infinite; }
+    @keyframes wave { 0%, 100% { transform: translateX(0) translateY(0); } 50% { transform: translateX(2px) translateY(-1px); } }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <!-- Навигация -->
+  <nav class="glass fixed top-0 left-0 right-0 p-4 z-50">
+    <div class="max-w-6xl mx-auto flex justify-center items-center gap-4">
+      <a href="index-adlizk.html" class="text-gray-800 font-medium">Главная</a>
+      <a href="tips.html" class="text-gray-800 font-medium">Советы родителям</a>
+      <a href="events.html" class="text-gray-800 font-medium">Мероприятия</a>
+      <a href="about.html" class="text-gray-800 font-medium">О нас</a>
+      <a href="camps.html" class="text-gray-800 font-medium">Каталог лагерей</a>
+      <a href="resources.html" class="text-gray-800 font-medium">Ресурсы</a>
+    </div>
+  </nav>
+
+  <!-- Заголовок -->
+  <section class="text-center pt-24 pb-12 px-6">
+    <h2 class="text-4xl font-extrabold mb-6 text-green-800">О нас</h2>
+    <p class="text-lg max-w-3xl mx-auto text-gray-700">
+      АДЛИЗК объединяет лучшие лагеря и здравницы Краснодарского края для создания безопасного, полезного и увлекательного отдыха для детей и семей. Наша миссия — поддерживать родителей в воспитании и организации отдыха, развивать экологическое сознание и укреплять семейные узы.
+    </p>
+  </section>
+
+  <!-- Контент -->
+  <section class="max-w-6xl mx-auto px-6 pb-16">
+    <div class="glass">
+      <h3 class="text-2xl font-semibold mb-4 text-green-800">Наша история</h3>
+      <p class="text-base text-gray-700 mb-4">
+        Основана в 2010 году, АДЛИЗК выросла из инициативы родителей и педагогов, стремящихся сделать отдых в Краснодарском крае безопасным и развивающим. За 15 лет мы помогли более 10,000 семьям выбрать лагеря, провели сотни образовательных программ и мероприятий, посвящённых воспитанию, экологии и здоровью.
+      </p>
+      <!-- Минималистичный SVG: солнце, домики, деревья, море -->
+      <svg class="w-full h-64 mb-4 krae-svg" viewBox="0 0 300 100" preserveAspectRatio="xMidYMid slice">
+        <rect x="0" y="0" width="300" height="100" fill="#e8f5e9"/>
+        <!-- Солнце -->
+        <circle cx="50" cy="20" r="15" fill="#ffeb3b">
+          <animate attributeName="opacity" values="1;0.8;1" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <path d="M50 5 L50 35 M35 20 L65 20 M35 10 L60 30 M35 30 L60 10" stroke="#ffeb3b" stroke-width="3"/>
+        <!-- Деревья -->
+        <rect x="100" y="70" width="10" height="30" fill="#2e7d32"/>
+        <circle cx="105" cy="60" r="15" fill="#66bb6a"/>
+        <rect x="140" y="70" width="10" height="30" fill="#2e7d32"/>
+        <circle cx="145" cy="60" r="15" fill="#66bb6a"/>
+        <!-- Домики -->
+        <path d="M180 80 L200 60 L220 80 Z" fill="#aed581"/>
+        <rect x="185" y="80" width="30" height="20" fill="#66bb6a"/>
+        <path d="M240 80 L260 60 L280 80 Z" fill="#aed581"/>
+        <rect x="245" y="80" width="30" height="20" fill="#66bb6a"/>
+        <!-- Море -->
+        <path class="wave-path" d="M0 90 Q75 80 150 90 Q225 80 300 90" fill="none" stroke="#4caf50" stroke-width="4"/>
+        <path class="wave-path" d="M0 95 Q75 85 150 95 Q225 85 300 95" fill="none" stroke="#81c784" stroke-width="3" transform="translate(0, 5)"/>
+        <text x="150" y="105" font-size="12" fill="#2e7d32" text-anchor="middle">АДЛИЗК</text>
+      </svg>
+      <h3 class="text-2xl font-semibold mb-4 text-green-800">Наша миссия</h3>
+      <p class="text-base text-gray-700 mb-4">
+        Мы стремимся обеспечить семьям доступ к качественным программам отдыха и воспитания, основанным на принципах безопасности, экологии и здоровья. Наши курсы, семинары и ресурсы помогают родителям лучше понимать детей, а лагеря региона — соответствовать высоким стандартам.
+      </p>
+      <h3 class="text-2xl font-semibold mb-4 text-green-800">Наши ценности</h3>
+      <ul class="list-disc pl-6 mb-4 text-gray-700 text-sm">
+        <li>Безопасность: все лагеря проходят сертификацию и проверку.</li>
+        <li>Экология: воспитываем любовь к природе через программы и игры.</li>
+        <li>Образование: предоставляем практические знания для родителей.</li>
+        <li>Семья: укрепляем связи через совместные активности.</li>
+      </ul>
+      <h3 class="text-2xl font-semibold mb-4 text-green-800">Наша команда</h3>
+      <p class="text-base text-gray-700 mb-4">
+        Наши эксперты — педагоги, психологи и организаторы отдыха с многолетним опытом. Мы сотрудничаем с ведущими лагерями и здравницами региона, чтобы предоставить вам лучшие программы.
+      </p>
+      <div class="grid md:grid-cols-3 gap-4 mb-4">
+        <div class="glass p-4 text-center">
+          <i data-lucide="user" class="w-8 h-8 text-green-600 mx-auto mb-2"></i>
+          <h4 class="text-base font-semibold text-green-800">Педагог</h4>
+          <p class="text-sm text-gray-700">Эксперт по образовательным программам и развитию детей.</p>
+        </div>
+        <div class="glass p-4 text-center">
+          <i data-lucide="heart" class="w-8 h-8 text-green-600 mx-auto mb-2"></i>
+          <h4 class="text-base font-semibold text-green-800">Психолог</h4>
+          <p class="text-sm text-gray-700">Специалист по эмоциональному благополучию семей.</p>
+        </div>
+        <div class="glass p-4 text-center">
+          <i data-lucide="calendar" class="w-8 h-8 text-green-600 mx-auto mb-2"></i>
+          <h4 class="text-base font-semibold text-green-800">Организатор</h4>
+          <p class="text-sm text-gray-700">Координатор мероприятий и лагерей.</p>
+        </div>
+      </div>
+      <a href="index-adlizk.html" class="btn">Вернуться на главную</a>
+    </div>
+  </section>
+
+  <!-- Подвал -->
+  <footer class="text-gray-100 py-4 text-center">
+    © 2025 АДЛИЗК. Все права защищены.
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
